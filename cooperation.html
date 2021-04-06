@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>智能车险|保险科技服务引领者</title>
+    <title>车铃铛|保险科技服务引领者</title>
     <meta name="format-detection" content="telephone=no,email=no,address=no">
     <link href="static/css/commain.css" rel="stylesheet">
     <link href="static/css/coopert.css" rel="stylesheet">
@@ -57,7 +57,7 @@
             var parmeBanner = {
                 "pageSize": 100,
                 "pageNum": 1,
-                "platformCode": "0514",
+               platformCode: "0514",
                 "type": "02"
             };
             $.when(getInfo(parmeBanner)).done(function (bannerData) {
@@ -74,9 +74,9 @@
             var parme = {
                 "pageSize": 100,
                 "pageNum": 1,
-                "platformCode": "0514",
+               platformCode: "0514",
                 "type": "01",
-                "parentId": 0
+               parentId: 0
             };
 
             $.when(getInfo(parme)).done(function (listData) {
@@ -100,11 +100,7 @@
                     childNum = $(this).attr("childNum") || 0;
                 if (parseInt(childNum) > 0) {
                     parme = {
-                        "pageSize": 100,
-                        "pageNum": 1,
-                        "platformCode": "0514",
-                        "type": "01",
-                        "parentId": kid
+                        parentId: kid
                     };
                     $.when(getChildren(parme)).done(function (childList) {
                         if (childList && childList.length > 0) {
@@ -189,20 +185,7 @@
                     name:"阳光财产保险股份有限公司上海市宝山支公司",
                     ossFileName:"ad_img/1614063743901.png",
                     parentId:119,
-                    platformCode:"0514",
-                    platformCodeList:[
-                    "0514"
-                    ],
-                    pointPrice:0.00,
-                    promotionPrice:0.00,
-                    sortIndex:1,
-                    startDate:"2021-02-16",
-                    statisticsAdBo:null,
-                    statisticsAdBos:[],
-                    status:"00",
-                    timePrice:0.00,
-                    type:"01",
-                    updateTime:null
+                    platformCode:"0514"
                 },
                 {
                     bucketName:"pub-zbh-pro-apus-imgs",
@@ -218,19 +201,7 @@
                     name:"阳光财产保险股份有限公司上海市松江支公司",
                     ossFileName:"ad_img/Logo-1603957798108-WechatIMG19.png",
                     parentId:119,
-                    platformCode:"0514",
-                    platformCodeList:[
-                    "0514"],
-                    pointPrice:0.00,
-                    promotionPrice:0.00,
-                    sortIndex:2,
-                    startDate:"2020-11-02",
-                    statisticsAdBo:null,
-                    statisticsAdBos:[],
-                    status:"00",
-                    timePrice:0.00,
-                    type:"01",
-                    updateTime:"2020-11-02T10:47:57"
+                    platformCode:"0514"
                 },
                 {
                     bucketName:"pub-zbh-pro-apus-imgs",
@@ -268,7 +239,7 @@
         //异步执行ajax请求
         function getInfo(parme) {
             var dfd = $.Deferred();
-            let yangguang = {
+            const list =  [{
                 bucketName:'pub-zbh-pro-apus-imgs',
                 commissionRatio: '0',
                 createTime:"2020-11-02T10:47:57",
@@ -282,24 +253,119 @@
                 name:"阳光保险集团",
                 ossFileName:"ad_img/Logo-1603702718742-WechatIMG5.png",
                 parentId:0,
-                platformCode:"0514",
-                platformCodeList:[
-                "0514"
-                ],
-                pointPrice:0.00,
-                promotionPrice:0.00,
-                sortIndex:1,
-                startDate:"2020-11-02",
-                statisticsAdBo:null,
-                statisticsAdBos:[
-                
-                ],
-                status:"00",
-                timePrice:0.00,
-                type:"01",
-                updateTime:"2020-11-02T10:47:57"
-            };
-            dfd.resolve([yangguang]);
+                platformCode:"0514"
+       },
+	   {
+            bucketName:"pub-zbh-pro-apus-imgs",
+            commissionRatio:"",
+            createTime:"2021-03-18T16:14:12",
+            endDate:"2025-03-18",
+            imgUrl:"https://pub-zbh-pro-apus-imgs.oss-cn-shanghai-finance-1-pub.aliyuncs.com/ad_img/1616055252240.png",
+            kid:191,
+            leafNode:"2",
+            linkUrl:"",
+            mchId:"000000000000785",
+            mchName:"中国人寿财产保险股份有限公司",
+            name:"中国人寿财产保险股份有限公司",
+            ossFileName:"ad_img/1616055252240.png",
+            parentId:0,
+            platformCode:"0514"
+         },
+         {
+            bucketName:"pub-zbh-pro-apus-imgs",
+            commissionRatio:"",
+            createTime:"2021-02-04T09:46:54",
+            endDate:"2025-02-04",
+            imgUrl:"https://pub-zbh-pro-apus-imgs.oss-cn-shanghai-finance-1-pub.aliyuncs.com/ad_img/1612403213743.png",
+            kid:177,
+            leafNode:"2",
+            linkUrl:"",
+            mchId:"000000000000112",
+            mchName:"国任财产保险股份有限公司",
+            name:"国任财产保险股份有限公司",
+           ossFileName:"ad_img/1612403213743.png",
+           parentId:0,
+           platformCode:"0514"
+         },
+         {
+            bucketName:"pub-zbh-pro-apus-imgs",
+            commissionRatio:"",
+            createTime:"2021-02-03T14:05:22",
+            endDate:"2025-02-03",
+            imgUrl:"https://pub-zbh-pro-apus-imgs.oss-cn-shanghai-finance-1-pub.aliyuncs.com/ad_img/1612332321592.png",
+            kid:174,
+            leafNode:"1",
+            linkUrl:"",
+            mchId:"000000000000277",
+            mchName:"紫金财产保险股份有限公司",
+            name:"紫金财产保险股份有限公司",
+           ossFileName:"ad_img/1612332321592.png",
+           parentId:0,
+           platformCode:"0514"
+         },
+         {
+            bucketName:"pub-zbh-pro-apus-imgs",
+            commissionRatio:"",
+            createTime:"2021-02-02T16:30:44",
+            endDate:"2025-02-02",
+            imgUrl:"https://pub-zbh-pro-apus-imgs.oss-cn-shanghai-finance-1-pub.aliyuncs.com/ad_img/1612254644037.jpg",
+            kid:172,
+            leafNode:"2",
+            linkUrl:"",
+            mchId:"000000000000056",
+            mchName:"都邦财产保险股份有限公司",
+            name:"都邦财产保险股份有限公司",
+           ossFileName:"ad_img/1612254644037.jpg",
+           parentId:0,
+           platformCode:"0514"
+         },
+         {
+            bucketName:"pub-zbh-pro-apus-imgs",
+            commissionRatio:"",
+            createTime:"2021-01-08T09:44:39",
+            endDate:"2026-01-08",
+            imgUrl:"https://pub-zbh-pro-apus-imgs.oss-cn-shanghai-finance-1-pub.aliyuncs.com/ad_img/1610070279123.png",
+            kid:168,
+            leafNode:"1",
+            linkUrl:"",
+            mchId:"000000000000780",
+            mchName:"北京光华保险经纪有限公司",
+            name:"北京光华保险经纪有限公司",
+           ossFileName:"ad_img/1610070279123.png",
+           parentId:0,
+           platformCode:"0514"
+         },
+         {
+            bucketName:"pub-zbh-pro-apus-imgs",
+            commissionRatio:"",
+            createTime:"2020-12-15T11:19:24",
+            endDate:"2024-12-15",
+            imgUrl:"https://pub-zbh-pro-apus-imgs.oss-cn-shanghai-finance-1-pub.aliyuncs.com/ad_img/1608002364336.jpg",
+            kid:150,
+            leafNode:"10",
+            linkUrl:"http://www.95590.cn/",
+            mchId:"000000000000487",
+            mchName:"中国大地财产保险股份有限公司",
+            name:"中国大地财产保险股份有限公司",
+           ossFileName:"ad_img/1608002364336.jpg",
+           parentId:0,
+           platformCode:"0514"
+         },        {
+            bucketName:"pub-zbh-pro-apus-imgs",
+            commissionRatio:"0",
+            createTime:"2020-09-01T14:41:46",
+            endDate:"2050-10-20",
+            imgUrl:"https://pub-zbh-pro-apus-imgs.oss-cn-shanghai-finance-1-pub.aliyuncs.com/ad_img/Logo-1598942506585-timg.jpeg",
+            kid:12,
+            leafNode:"1",
+            linkUrl:"",
+            mchId:"000000000000416",
+            mchName:"华安财产保险股份有限公司",
+            name:"华安财产保险股份有限公司",
+            ossFileName:"ad_img/Logo-1598942506585-timg.jpeg",
+            parentId:0
+         }]
+            dfd.resolve(list);
             return dfd.promise();
         }
 
